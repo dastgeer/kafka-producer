@@ -9,16 +9,16 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 @Slf4j
-@Service
+//@Service
 public class CommodityScheduler {
 
-    @Autowired
+   // @Autowired
     private CommodityUtilService commodityUtilService;
 
-    @Autowired
+   // @Autowired
     private CommodityProducer commodityProducer;
 
-    @Scheduled(fixedRate = 5000)
+    //@Scheduled(fixedRate = 5000)
     public void sendCommodityWithSchedule(){
 
         commodityUtilService.getAllCommoditiesDetail().forEach(commodity-> {
